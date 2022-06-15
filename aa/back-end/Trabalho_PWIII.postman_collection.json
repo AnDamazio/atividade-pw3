@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "8bafb8bd-6f6e-4ee1-8c4e-a9b9eecad81e",
+		"name": "Trabalho_PWIII",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Especialidade",
+			"item": [
+				{
+					"name": "listarEspecialidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/categoria/listarCategoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categoria",
+								"listarCategoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarEspecialidadeID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/categoria/listarCategoria/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categoria",
+								"listarCategoria",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserirEspecialidade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome_categoria\":\"NODEJS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categoria/cadastrarCategoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categoria",
+								"cadastrarCategoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterarEspecialidade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"1\",\r\n    \"nome_categoria\":\"PROGRAMAÇÃO WEB 3\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categoria/alterarCategoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categoria",
+								"alterarCategoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluirEspecialidade",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categoria/excluirCategoria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categoria",
+								"excluirCategoria"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medico",
+			"item": [
+				{
+					"name": "cadastrarMedico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome_medico",
+									"value": "Carlos Silvac",
+									"type": "text"
+								},
+								{
+									"key": "telefone_medico",
+									"value": "1178182838",
+									"type": "text"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": [
+										"/C:/Users/vitor.jesus/Desktop/Dev/PWIII/Trabalho/CRM.png",
+										"/C:/Users/vitor.jesus/Desktop/Dev/PWIII/Trabalho/medico1.jpg"
+									]
+								},
+								{
+									"key": "email_medico",
+									"value": "medico1@medico1.com",
+									"type": "text"
+								},
+								{
+									"key": "celular_medico",
+									"value": "11978182838",
+									"type": "text"
+								},
+								{
+									"key": "tblEspecialidadeId\n",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/Medico/cadastrarMedico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"Medico",
+								"cadastrarMedico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editarMedico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "titulo",
+									"value": "Sapiens - Uma breve história da humanidade",
+									"type": "text"
+								},
+								{
+									"key": "preco",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": [
+										"/C:/Users/Aluno/Downloads/sheep-g272aad903_640.jpg",
+										"/C:/Users/Aluno/Downloads/dog-g287effcdf_640.jpg"
+									]
+								},
+								{
+									"key": "detalhes",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sapien enim, rutrum eget laoreet eu, semper vitae eros. Etiam rhoncus massa dui, a ultricies tortor eleifend vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Integer pretium est dolor, facilisis tincidunt odio fringilla eu. Suspendisse auctor iaculis ligula ac sodales. Etiam dignissim nunc vestibulum turpis porttitor convallis. Donec id felis nunc. Proin eget massa nisl. Vestibulum a tortor magna. Vivamus eget urna eget quam rhoncus elementum eget at magna. Cras porttitor in purus id dignissim. Cras dignissim ex massa, eget scelerisque augue cursus a. Aenean non libero vitae lectus luctus dignissim.",
+									"type": "text"
+								},
+								{
+									"key": "tblCategoriaumId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/livro/cadastrarLivro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livro",
+								"cadastrarLivro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarMedico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/livro/listarLivro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livro",
+								"listarLivro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarMedicoCodigo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/livro/listarLivroCodigo/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livro",
+								"listarLivroCodigo",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluirMedico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/livro/excluirLivro/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"livro",
+								"excluirLivro",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
